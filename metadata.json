@@ -1,0 +1,5 @@
+{
+  "name": "Shelf Expander",
+  "description": "A dialogue with your library. Upload a photograph of your bookshelf, and The Librarian will perceive the spaces between your books.",
+  "requestFramePermissions": []
+}

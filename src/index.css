@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --color-paper: #F9F6F0;
+  --color-ink: #1F1A17;
+  --color-surface: #FFFDF9;
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "EB Garamond", serif;
+}
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+
+  --color-paper: var(--color-paper);
+  --color-ink: var(--color-ink);
+  --color-surface: var(--color-surface);
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+@layer utilities {
+  .poetic-fade {
+    @apply transition-opacity duration-1000 ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
